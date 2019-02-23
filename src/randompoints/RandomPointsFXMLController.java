@@ -34,7 +34,7 @@ public final class RandomPointsFXMLController implements Initializable {
     private Canvas canvas;
 
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void goNaive(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
 
