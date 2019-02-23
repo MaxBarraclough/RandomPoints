@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author mb
  */
-public class RandomPoints extends Application {
+public final class RandomPoints extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {

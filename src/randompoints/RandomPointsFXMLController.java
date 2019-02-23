@@ -16,7 +16,7 @@ import javafx.scene.control.Label;
  *
  * @author mb
  */
-public class RandomPointsFXMLController implements Initializable {
+public final class RandomPointsFXMLController implements Initializable {
 
     @FXML
     private Label label;
