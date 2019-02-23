@@ -21,8 +21,10 @@ import javafx.scene.paint.Color;
  */
 public final class RandomPointsFXMLController implements Initializable {
 
-    private static final int    CIRCLE_DIAMETER = 200;
-    private static final int    CIRCLE_RADIUS = CIRCLE_DIAMETER / 2;
+    private static int          CIRCLE_DIAMETER = -1; // initialised at runtime
+
+    private static int          CIRCLE_RADIUS = -1;   // initialised at runtime
+
     private static final double TAU = java.lang.Math.PI * 2.0;
 
     private static final java.util.Random Rand = new java.util.Random();
@@ -117,6 +119,11 @@ public final class RandomPointsFXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+        RandomPointsFXMLController.CIRCLE_DIAMETER = this.canvas.widthProperty().intValue();
+        RandomPointsFXMLController.CIRCLE_RADIUS = RandomPointsFXMLController.CIRCLE_DIAMETER / 2;
+
+        // System.out.println(RandomPointsFXMLController.CIRCLE_DIAMETER);
 
         RandomPointsFXMLController.Rand.nextDouble(); // churn up the RNG
         RandomPointsFXMLController.Rand.nextDouble();
