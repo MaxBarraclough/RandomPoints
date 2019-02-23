@@ -27,17 +27,12 @@ public final class RandomPointsFXMLController implements Initializable {
 
     private static final java.util.Random Rand = new java.util.Random();
 
-    @FXML
-    private Label label;
 
     @FXML
     private Canvas canvas;
 
     @FXML
     private void goNaive(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-
         System.out.println("Now I will draw to the canvas...");
 
         final GraphicsContext graphCon = canvas.getGraphicsContext2D();
