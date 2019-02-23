@@ -67,8 +67,8 @@ public final class RandomPointsFXMLController implements Initializable {
         System.out.println("Now I will draw to the canvas...");
 
         final GraphicsContext graphCon = canvas.getGraphicsContext2D();
-        graphCon.setFill(Color.WHITE);
-        graphCon.setStroke(Color.WHITE);
+        graphCon.setFill(Color.RED);
+        graphCon.setStroke(Color.RED);
 
         for (int i = 0 ; i != 200; ++i)
         {
