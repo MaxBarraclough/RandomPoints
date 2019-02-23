@@ -31,6 +31,27 @@ public final class RandomPointsFXMLController implements Initializable {
     @FXML
     private Canvas canvas;
 
+    /**
+     * @param event Ignored
+     */
+    @FXML
+    private void clear(ActionEvent event) {
+        System.out.println("Now I will clear the canvas...");
+
+        final GraphicsContext graphCon = canvas.getGraphicsContext2D();
+
+        // First clear whole area, not just the circle.
+        // This is important as points can draw outside the circle area.
+        // https://stackoverflow.com/a/27204962/
+        graphCon.clearRect(0.0, 0.0, canvas.getWidth(), canvas.getHeight());
+
+        graphCon.setFill(Color.BLACK);
+        graphCon.setStroke(Color.BLACK);
+        graphCon.setLineWidth(10.0);
+        graphCon.fillOval(0.0, 0.0, CIRCLE_DIAMETER, CIRCLE_DIAMETER); // x y width height
+    }
+
+
     @FXML
     private void goNaive(ActionEvent event) {
         System.out.println("Now I will draw to the canvas...");
@@ -102,13 +123,7 @@ public final class RandomPointsFXMLController implements Initializable {
         RandomPointsFXMLController.Rand.nextDouble();
         RandomPointsFXMLController.Rand.nextDouble();
 
-        final GraphicsContext graphCon = canvas.getGraphicsContext2D();
-        graphCon.setFill(Color.BLACK);
-        graphCon.setStroke(Color.BLUE);
-        graphCon.setLineWidth(10.0);
-
-
-        graphCon.fillOval(0.0, 0.0, CIRCLE_DIAMETER, CIRCLE_DIAMETER); // x y width height
+        this.clear(null);
     }
 
 }
