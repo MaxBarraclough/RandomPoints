@@ -78,8 +78,8 @@ public final class RandomPointsFXMLController implements Initializable {
             final double coord_y = offset_y + CIRCLE_RADIUS;
 
             // Take the chosen point and draw it using a small circle,
-            // of diameter 3.0. Careful to offset by 1.0 (*not* 1.5).
-            graphCon.fillRect(coord_x - 1.0, coord_y - 1.0, 3.0, 3.0); // x, y, w, h
+            // of diameter 3.0. Careful to offset by 1.5.
+            graphCon.fillRect(coord_x - 1.5, coord_y - 1.5, 3.0, 3.0); // x, y, w, h
         }
 
     }
