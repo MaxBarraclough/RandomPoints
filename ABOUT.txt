@@ -1,0 +1,10 @@
+ABOUT
+=====
+
+Consider the problem of selecting a point within a circle (more precisely a 2-ball),
+with a uniform distribution. Your inputs are any (fixed) number of random numbers.
+(You may not use a discard-and-retry solution, on account of 'fixed'.)
+
+This is a small JavaFX application exploring the square-root based solution
+I ramble about at https://news.ycombinator.com/item?id=19202890
+
